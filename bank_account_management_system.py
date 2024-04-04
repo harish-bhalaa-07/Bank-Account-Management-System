@@ -3,6 +3,14 @@ def deposit_money(amount):
     transaction_history.append(('deposit', amount))
     print(f"Deposited ${amount} into your account.")
 
+def withdraw_money(amount):
+    global transaction_history
+    if amount <= check_balance():
+        transaction_history.append(('withdrawal', amount))
+        print(f"Withdrew ${amount} from your account.")
+    else:
+        print("Insufficient funds.")
+
 def check_balance():
     global transaction_history
     balance = 0
