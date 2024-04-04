@@ -1,3 +1,8 @@
+def deposit_money(amount):
+    global transaction_history
+    transaction_history.append(('deposit', amount))
+    print(f"Deposited ${amount} into your account.")
+
 def check_balance():
     global transaction_history
     balance = 0
