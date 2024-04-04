@@ -1,3 +1,8 @@
+def deposit_money(amount):
+    global transaction_history
+    transaction_history.append(('deposit', amount))
+    print(f"Deposited ${amount} into your account.")
+
 def bank_account_management():
     while True:
         print("\n1. Deposit Money\n2. Withdraw Money\n3. Check Balance\n4. View Transaction History\n5. Quit")
